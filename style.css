@@ -1,0 +1,617 @@
+/* 
+Author: Joel Ike
+Date: 9th October 2022
+File: Assessment 1
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  min-width: 100%;
+}
+
+body {
+  background-color: antiquewhite;
+  font-family: "Noto Sans JP", sans-serif;
+  width: 100%;
+  position: relative;
+}
+
+/* header */
+header {
+  /* width: 120rem; */
+  position: relative;
+}
+
+#container a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: rgb(135, 116, 4);
+  margin-left: 0.6em;
+}
+
+.busy {
+  color: rgb(249, 140, 45);
+}
+
+#main-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3f2c2c;
+  z-index: 1;
+}
+
+.head-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.nav-icon {
+  border: none;
+  background: none;
+  display: none;
+}
+
+.nav-icon .close {
+  display: none;
+}
+
+.nav-icon {
+  width: 3.2rem;
+}
+
+.mobile-icon {
+  font-size: 3.2rem;
+  color: #000;
+}
+
+.mobile-icon.about-icon {
+  font-size: 3.2rem;
+  color: #000;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: right;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.main-nav-link:link, .main-nav-link:visited {
+  text-decoration: none;
+  color: rgb(249, 140, 45);
+  padding: 1.6em 1.6em;
+}
+
+.main-nav-link:hover, .main-nav-link:active {
+  color: #a95b23;
+}
+
+.mobile-icon[name="close-outline"] {
+  display: none;
+}
+
+/* Hero section */
+#hero {
+  min-width: 100%;
+  background-image: url(hotel-room-images/bed1.jpg);
+  background-size: cover;
+  height: 60rem;
+  background-color: #45260f;
+  animation: slider 15s infinite linear;
+  position: relative;
+}
+
+@keyframes slider {
+  0% {background-image: url(hotel-room-images/bed2.jpg);}
+  35% {background-image: url(hotel-room-images/bed3.jpg);}
+  75% {background-image: url(hotel-room-images/bed4.jpg);}
+  100% {background-image: url(hotel-room-images/bed5.jpg);}
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.message {
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  color: rgb(248, 118, 4);
+  font-size: 1.3em;
+}
+
+.button_container {
+  padding-top: 1.6rem;
+}
+
+.button_container a {
+  display: block;
+  color: rgb(249, 140, 45);
+  text-decoration: none;
+}
+
+.message p {
+  font-size: 2.4rem;
+}
+
+.btn-4:link,
+.btn-4:visited {
+  display: inline-block;
+  background: #805d5d;
+  border: none;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ccc;
+  padding: 1.6rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+}
+
+.open {
+  display: block;
+}
+
+/* input {
+  flex: 1;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} */
+
+.btn {
+  padding: 1.5rem;
+  border: none;
+  background-color: #7f5151;
+  color: #ccc;
+  border-radius: 5px;
+  transition: all 0.3s;
+  align-self: end;
+}
+
+.btn:hover {
+  background-color: #805d5d;
+  cursor: pointer;
+}
+
+
+/* Testimonial Section */
+.vessel {
+  font-size: 1.25em;
+  background-color: peachpuff;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+}
+
+.secondary-heading {
+  font-size: 4.6rem;
+  margin-bottom: 1.6rem;
+  line-height: 1;
+}
+
+.subheading {
+  color: #805d5d;
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4rem;
+  column-gap: 4.8rem;
+}
+
+.testimonial-section {
+  padding: 6%;
+}
+
+.testimonial-img {
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.testimonial-name {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.sub_heading h1 {
+  font-family: "Roboto", sans-serif;
+  color: rgb(249, 140, 45);
+  text-align: center;
+}
+
+.image_container {
+  padding: 1rem;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  position: relative;
+}
+
+.case {
+  width: 100%;
+  display: inline-block;
+  padding: 1%;
+  overflow: hidden;
+  position: relative;
+}
+
+.case p {
+  font-size: 1.6rem;
+}
+
+.case img:hover {
+  transform: scale(1.2);
+  transition: all 0.4s;
+}
+
+.filler {
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.53);
+  transition: all 0.4;
+}
+
+.filler:hover {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.rooms {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.rose {
+  object-position: top;
+}
+
+.box p {
+  color: rgb(248, 118, 4);
+  text-align: center;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  color: black;
+  font-size: small;
+  padding: 2em 2em;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-size: small;
+  clear: left;
+}
+
+
+/* cta section */
+.cta-section {
+  /* background-color: #333; */
+  padding: 4.8rem 0 12.8rem 0;
+}
+
+.cta-container {
+  max-width: 120rem;
+  width: 90%;
+  margin: auto;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-image: linear-gradient(to right bottom, #eb985c, #e67e22);
+  /* height: 50rem; */
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+  color: #45260f;
+}
+
+.cta-text-box h3 {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 152, 92, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("hotel-room-images/bed11.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  color: inherit;
+  border-radius: 9px;
+  background-color: #fae5d3;
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 8px rgba(250, 229, 211, 0.5);
+}
+
+.cta .error input{
+  border: 2px solid red;
+  background-color: rgba(212, 142, 142, 0.521);
+}
+
+.error-message {
+color: red;
+padding: 0.1rem 0.5rem;
+position: absolute;
+}
+
+
+/* contact section */
+#contact {
+  text-align: center;
+  color: rgb(248, 118, 4);
+  padding: 5rem 0;
+  background-color: peachpuff;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact h3 a {
+  color: #7f5151;
+  text-decoration: none;
+}
+
+
+/* About Section */
+#about {
+  padding: 8rem 0;
+  max-width: 140rem;
+  width: 90%;
+  margin: auto;
+}
+
+#about .heading {
+  text-align: center;
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.overview p,
+.announcement p,
+.trading {
+  margin-bottom: 1.6rem;
+}
+
+.overview p {
+  text-align: left;
+  font-size: 2rem;
+  color: black;
+}
+
+.trading p {
+  text-align: left;
+  font-size: 2rem;
+  color: black;
+}
+
+.announcement p {
+  text-align: left;
+  font-size: 2rem;
+  color: black;
+}
+
+.announcement ul li {
+  font-size: 1.6rem;
+}
+
+.reviews p {
+  text-align: left;
+  font-size: 1.5em;
+  color: black;
+}
+
+.trading h1 {
+  color: rgb(248, 118, 4);
+}
+
+.announcement h1 {
+  color: rgb(248, 118, 4);
+}
+
+.announcement li {
+  text-align: left;
+  font-size: 1.5em;
+  color: black;
+}
+
+.reviews h1 {
+  color: rgb(248, 118, 4);
+}
+
+.announcement a {
+  color: rgb(248, 118, 4);
+  text-decoration: none;
+}
+
+.subscribe {
+  font-style: italic;
+  font-size: 1.6rem;
+}
+
+
+/* Order Section */
+.room-grid {
+    padding-top: 10rem;
+    max-width: 100rem;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+.card {
+    border-radius: 11px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.53);
+    overflow: hidden;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-box {
+    width: 100%;
+    margin-bottom: 1.6rem;
+}
+
+.card-text {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.highlight {
+    font-size: 2.2rem;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    /* text-align: start; */
+}
+
+.price-box {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-box span {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.content-box {
+    padding: 1.6rem;
+}
+
+.order:link , .order:visited {
+    background-color: #7f5151;
+    padding: 1.4rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+
+/* Sumbitted Section */
+
+.sumbit-main {
+    padding-top: 20rem;
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.submit-card {
+    width: 60rem;
+    height: 20rem;
+    margin: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.53);
+    text-align: center;
+    padding-top: 3rem;
+    border-radius: 9px;
+}
+
+.submit-text {
+    font-size: 3.2rem;
+}
